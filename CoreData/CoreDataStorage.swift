@@ -12,11 +12,11 @@ private enum Constants {
     static let storageName = "DataStorage.sqlite"
 }
 
-class CoreDataStorage {
+class CoreDataStorage: CoreDataStoragePrivateType {
 
-    private var model: NSManagedObjectModel!
-    private var coordinator: NSPersistentStoreCoordinator!
-    private var mainContext: NSManagedObjectContext!
+    var model: NSManagedObjectModel!
+    var coordinator: NSPersistentStoreCoordinator!
+    var mainContext: NSManagedObjectContext!
 
     init() {
         setup()

@@ -11,7 +11,7 @@ typealias FileStorageItemListCompletion = (_ results: [FileStorageItem]?, _ erro
 typealias FileStorageItemCompletion = (_ success: Bool, _ error: Error?) -> Void
 typealias FileStorageItemsCountComplition = (_ count: Int?, _ error: Error?) -> Void
 
-protocol FileStorageItemInput {
+protocol FileStorageItemInput: class {
     func fetchFileItems(parentId: String?, completion: @escaping FileStorageItemListCompletion)
     func addToRootFoler(items: [FileStorageItem], completion: @escaping FileStorageItemCompletion)
     func insertToRootFolder(fileItem: FileStorageItem, completion: @escaping FileStorageItemCompletion)

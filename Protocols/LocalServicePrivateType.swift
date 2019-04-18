@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol LocalServicePrivateType {
+protocol LocalServicePrivateType: class {
     var provider: FileManager { get set }
 }

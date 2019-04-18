@@ -11,6 +11,6 @@ typealias CoreDataStorageOperationClosure = (_ context: NSManagedObjectContext, 
 typealias CoreDataStorageSaveClosure = (_ completion: CoreDataStorageSaveCompletion?) -> Void
 typealias CoreDataStorageSaveCompletion = (_ success: Bool, _ error: Error?) -> Void
 
-protocol CoreDataStorageInput {
+protocol CoreDataStorageInput: class {
     func performInTemporaryContext(block: @escaping CoreDataStorageOperationClosure)
 }

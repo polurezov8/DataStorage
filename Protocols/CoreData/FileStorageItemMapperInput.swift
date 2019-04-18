@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FileStorageItemMapperInput {
+protocol FileStorageItemMapperInput: class {
     func map(fileStorageItem: FileStorageItem, to cdFileStorageItem: CDFileStorageItem)
     func fileStorageItem(from cdFileStorageItem: CDFileStorageItem, includeCildren: Bool) -> FileStorageItem?
 }

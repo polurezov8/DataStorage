@@ -10,7 +10,7 @@ import UIKit
 
 typealias LocalStorageSaveImageCompletion = (_ success: Bool) -> Void
 
-protocol ImageStorable {
+protocol ImageStorable: class {
     func getImagesDirectoryPath() -> String
     func createImageDirectory()
     func deleteImageDirectory()
